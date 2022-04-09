@@ -14,7 +14,7 @@
         <div class="bg-wall">
             <div class="navbar">
                 <h3>10 იანვრიდან - 12 მარტამდე</h3>
-                <img src="./assets/close (1).png" />
+                <a href="#" class="close"></a>
             </div>
             <section class="first-section" id="first">
                 <div class="banner">
@@ -33,18 +33,18 @@
             <img class="bg-banner" src="./assets/banner.jpg" />
             <section class="card">
                 <div class="banner-card">
-                    <div class="week-1">
+                    <div onclick="weeklyPromotions(event, 'tab1')" class="week-1 weekTabs active">
                         <div class="week-text">
                             <h5>1-4 კვირა</h5>
                             <p>2 000 000₾</p>
                         </div>
-                        <img src="./assets/tab-bg-active.png">
+                        <img src="./assets/tab-bg.png">
                     </div>
-                    <div class="week-1">
+                    <div onclick="weeklyPromotions(event, 'tab2')" class="weekTabs week-1">
                         <div class="week-text">
                             <div class="week-icon dark">
                                 <img src="./assets/lock.png" alt="">
-                                <h5>1-4 კვირა</h5>
+                                <h5>5-8 კვირა</h5>
                             </div>
                             <p class="dark">2 000 000₾</p>
                         </div>
@@ -54,7 +54,7 @@
                         <div class="week-text">
                             <div class="week-icon dark">
                                 <img src="./assets/lock.png" alt="">
-                                <h5>1-4 კვირა</h5>
+                                <h5>5-8 კვირა</h5>
                             </div>
                             <p class="dark">2 000 000₾</p>
                         </div>
@@ -64,7 +64,7 @@
                         <div class="week-text">
                             <div class="week-icon dark">
                                 <img src="./assets/lock.png" alt="">
-                                <h5>1-4 კვირა</h5>
+                                <h5>5-8 კვირა</h5>
                             </div>
                             <p class="dark">2 000 000₾</p>
                         </div>
@@ -74,17 +74,17 @@
                 </div>
             </section>
 
-            <!-- <div class="second-section" id="second">
+            <div class="second-section" id="second">
                 <h1 class="date-title">12 კვირის განმავლობაში, მიიღე ფულადი პრიზები ყოველკვირეული საპრიზო ფონდიდან</h1>
                 <div class="date">
                     <ul>
-                        <li class="active">2.07-29.07</li>
-                        <li>2.07-29.07</li>
-                        <li>2.07-29.07</li>
-                        <li>2.07-29.07</li>
+                        <li onclick="weeklyPromotions(event, 'tab1')" class="weekTabs active">2.07-29.07</li>
+                        <li onclick="weeklyPromotions(event, 'tab2')" class="weekTabs">2.07-29.07</li>
+                        <li class="weekTabs">2.07-29.07</li>
+                        <li class="weekTabs">2.07-29.07</li>
                     </ul>
                 </div>
-                <div class="panel">
+                <div class="panel promotions" id="tab1">
                     <div class="panel-2 left-panel">
                         <div class="panel-text">
                             <h3>ᲛᲝᲮᲕᲓᲘ ᲧᲝᲕᲔᲚᲙᲕᲘᲠᲔᲣᲚ ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ</h3>
@@ -94,7 +94,7 @@
                         <div class="table">
                             <div class="table-title">
                                 <h1 class="cyan">ყოველდღიური 248 000₾</h1>
-                                <h1 class="cyan bold">Top 1500</h1>
+                                <h1 class="dark-cyan">Top 1500</h1>
                             </div>
                             <table>
                                 <tr class="rank-title">
@@ -128,11 +128,12 @@
 
                             </table>
                         </div>
+                        <div class="plus">
+                            <img src="./assets/plus.png" />
+                        </div>
                     </div>
 
-                    <div class="plus">
-                        <img src="./assets/plus.png" />
-                    </div>
+                    
 
                     <div class="panel-2 right-panel">
                         <div class="panel-text">
@@ -141,8 +142,8 @@
                         </div>
                         <div class="table">
                             <div class="table-title">
-                                <h1 class="cyan">ყოველდღიური 248 000₾</h1>
-                                <h1 class="cyan bold">Top 1500</h1>
+                                <h1 class="orange">ყოველდღიური 248 000₾</h1>
+                                <h1 class="dark-orange">Top 1500</h1>
                             </div>
                             <table>
                                 <tr class="rank-title">
@@ -183,20 +184,8 @@
                             ფანჯარაში</p>
                     </div>
                 </div>
-            </div> -->
 
-            <div class="third-section" id="third">
-                <h1 class="date-title">12 კვირის განმავლობაში, მიიღე ფულადი პრიზები ყოველკვირეული საპრიზო ფონდიდან</h1>
-                <div class="date">
-                    <ul>
-                        <li>2.07-29.07</li>
-                        <li class="active">2.07-29.07</li>
-                        <li>2.07-29.07</li>
-                        <li>2.07-29.07</li>
-                    </ul>
-                </div>
-
-                <div class="panel second-panel">
+                <div class="panel second-panel promotions" id="tab2" style="display: none">
                     <div class="popup">
                         <img src="./assets/multipliers-img.png" />
                         <div class="popup-texts">
@@ -205,7 +194,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="panel-2 left-pane second-dection__panel">
+                    <div class="panel-2 left-pane second-section__panel">
                         <div class="panel-text">
                             <h3>ᲛᲝᲮᲕᲓᲘ ᲧᲝᲕᲔᲚᲙᲕᲘᲠᲔᲣᲚ ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ</h3>
                             <p>დაიკავე საპრიზო ადგილი: ერთ სპინზე დაფიქსირებული მოგების ყველაზე მაღალი კოეფიციენტი არის
@@ -216,7 +205,7 @@
                         <div class="table">
                             <div class="table-title">
                                 <h1 class="cyan">ყოველდღიური 248 000₾</h1>
-                                <h1 class="cyan bold">Top 1500</h1>
+                                <h1 class="dark-cyan">Top 1500</h1>
                                 <div class="mark">
                                     <img src="./assets/example-icon.png" alt="">
                                     <span class="hover-box">
@@ -261,13 +250,11 @@
 
                             </table>
                         </div>
+                        <div class="plus">
+                            <img src="./assets/plus.png" />
+                        </div>
                     </div>
-
-                    <div class="plus">
-                        <img src="./assets/plus.png" />
-                    </div>
-
-                    <div class="panel-2 right-panel second-dection__panel">
+                    <div class="panel-2 right-panel second-section__panel">
                         <div class="panel-text">
                             <h3>ᲩᲐᲛᲝᲐᲒᲓᲔ ᲛᲣᲚᲢᲘᲞᲚᲘᲙᲐᲢᲝᲠᲔᲑᲘ ᲐᲜ ᲛᲘᲘᲦᲔ ᲤᲠᲘᲡᲞᲘᲜᲔᲑᲘ</h3>
                             <p>მიიღე ფულადი პრიზი: თამაშის დროს შემთხვევით ჩამოგდებული ფულადი მულტიპლიკატორი
@@ -277,8 +264,8 @@
                         </div>
                         <div class="table">
                             <div class="table-title">
-                                <h1 class="cyan">ყოველდღიური 36 000₾</h1>
-                                <h1 class="cyan bold">500 პრიზი</h1>
+                                <h1 class="orange">ყოველდღიური 36 000₾</h1>
+                                <h1 class="dark-orange">500 პრიზი</h1>
                                 <div class="mark">
                                     <img src="./assets/example-icon.png" alt="">
                                     <span class="hover-box">
@@ -387,24 +374,34 @@
                 </div>
         </div>
 
+
         <div class="accordation">
             <h1>წესები და პირობები</h1>
-            <div class="drop">
-                <button class="accordion">როდის იწყება და რა ფორმატით გაიმართება აქცია</button>
-                <div class="drop-down">
-                    <p>Lorem ipsum...</p>
-                </div>
-
-                <button class="accordion">როგორ მივიღო აქციაში მონაწილეობა?</button>
-                <div class="drop-down">
-                    <p>Lorem ipsum...</p>
-                </div>
-
-                <button class="accordion">სხვადასვა</button>
-                <div class="drop-down">
-                    <p>Lorem ipsum...</p>
-                </div>
-            </div>
+            <ul>
+                <li>
+                    <input type="checkbox" checked>
+                    <i class="arrow"></i>
+                    <h2><i class="fas fa-code"></i>როდის იწყება და რა ფორმატით გაიმართება აქცია</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, alias!
+                    </p>
+                </li>
+                <li>
+                    <input type="checkbox" checked>
+                    <i class="arrow"></i>
+                    <h2><i class="fas fa-code"></i>როგორ მივიღო აქციაში მონაწილეობა?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                        aliquam aspernatur necessitatibus placeat, qui velit?
+                    </p>
+                </li>
+                <li>
+                    <input type="checkbox" checked>
+                    <i class="arrow"></i>
+                    <h2><i class="fas fa-code"></i>სხვადასვა</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non molestiae
+                        optio incidunt et. Quam nemo voluptates sequi voluptatum corporis deleniti?
+                    </p>
+                </li>
+            </ul>
         </div>
 
         <div class="gradient-line">
