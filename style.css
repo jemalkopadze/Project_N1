@@ -821,6 +821,10 @@ h2 {
     font-size: 14px;
   }
 
+  .date-title {
+    font-size: 14px;
+  }
+
   .date ul li {
     width: 120px;
   }
@@ -856,9 +860,69 @@ h2 {
 
 @media (max-width: 480px) {
 
+  .banner {
+    display: block;
+  }
+
+  .banner img {
+    width: 54%;
+    margin-left: 46%;
+  }
+
+  .banner-card img {
+    position: relative;
+    margin: 0 15px 0 0;
+}
+
   .date ul li {
     width: 80px;
+    font-size: 12px;
   }
+
+  .table {
+    width: 320px;
+  }
+
+  .date-title {
+    font-size: 12px;
+  }
+
+  .table-title h1 {
+    font-size: 14px;
+  }
+
+  .margin td {
+    font-size: 10px;
+  }
+
+  .panel {
+    width: 102%;
+  }
+
+  .panel h3 {
+    font-size: 14px;
+  }
+
+  .panel p {
+    font-size: 12px;
+  }
+
+  .panel-text p {
+    margin-top: 10px;
+  }
+
+  .plus {
+    top: 108%;
+    left: 39%;
+}
+
+.plus img {
+  width: 100px;
+}
+
+.bottom-text {
+  width: 403px;
+}
 
   .slider-wrap-text {
     font-size: 12px;
